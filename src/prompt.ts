@@ -41,7 +41,7 @@ export async function createProject() {
   console.log({ answers });
 }
 
-export const createWithEnquirer = async () => {
+export async function createWithEnquirer() {
   printLogo();
   const answers = await enquirer.prompt([
     {
@@ -92,4 +92,4 @@ export const createWithEnquirer = async () => {
   ]);
 
   console.log({ answers });
-};
+}

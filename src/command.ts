@@ -1,4 +1,5 @@
 import { program } from "commander";
+import shell from "shelljs";
 import { createProject } from "./prompt";
 
 export function handleCommand() {
@@ -9,7 +10,8 @@ export function handleCommand() {
     console.log("clean command");
   });
   program.command("compile").action(() => {
-    console.log("compile command");
+    // console.log("compile command");
+    shell.exec("aptos move compile");
   });
   program.command("console").action(() => {
     console.log("console command");
